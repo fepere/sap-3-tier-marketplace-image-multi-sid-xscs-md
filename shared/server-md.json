@@ -204,10 +204,13 @@
         "typeHandlerVersion": "[variables('cseExtVersion')]",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "fileUris": [
-            "[parameters('csExtensionScript')]"
-          ],
-          "commandToExecute": "[concat(parameters('csExtensionscriptCall'), ' ', parameters('csExtensionscriptArgs'))]"
+          //"fileUris": [
+          //  "[parameters('csExtensionScript')]"
+          //],
+          //"commandToExecute": "[concat(parameters('csExtensionscriptCall'), ' ', parameters('csExtensionscriptArgs'))]"
+          "fileUris": ["https://raw.githubusercontent.com/fepere/sap-file-server-md/master/shared/noop.sh"],
+          "commandToExecute": "./noop.sh"
+        }
         }
       }
     }
